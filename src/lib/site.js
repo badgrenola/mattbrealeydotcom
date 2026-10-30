@@ -7,10 +7,10 @@ export const site = {
   github: "https://github.com/badgrenola",
   linkedin: "https://www.linkedin.com/in/mattbrealey/",
   image: {
-    path: "/profile.jpg",
+    path: "/social-default.jpg",
     alt: "Matt Brealey's head",
-    width: 400,
-    height: 400,
+    width: 1200,
+    height: 630,
   },
 };
 
