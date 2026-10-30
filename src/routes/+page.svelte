@@ -170,7 +170,7 @@
         </span>
     </p>
     <p class="pt-4">
-      Or if you have something odd that needs building, or you're hiring,
+      And if you have something odd that needs building, or you're hiring,
       <a class="font-semibold colorLink" href="mailto:hello@mattbrealey.com">why not say hello?</a>
     </p>
   </span>
