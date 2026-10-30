@@ -7,27 +7,10 @@
   export let smallImage
   export let tags
   export let title
+  import SEO from './SEO.svelte'
 </script>
 
-<svelte:head>
-  <title>{title}</title>
-  <meta name="description" content={desc} />
-  <meta name="keywords" content={keywords}/>
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content={`https://mattbrealey.com/projects/${slug}`}>
-  <meta property="og:title" content={`${title} // Matt Brealey`}>
-  <meta property="og:description" content={desc}>
-  <meta property="og:image" content={`https://mattbrealey.com${smallImage}`}>
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content={`https://mattbrealey.com/projects/${slug}`}>
-  <meta name="twitter:title" content={`${title} // Matt Brealey`}>
-  <meta name="twitter:description" content={desc}>
-  <meta name="twitter:image" content={`https://mattbrealey.com${smallImage}`}>
-</svelte:head>
+<SEO {title} description={desc} image={smallImage} imageAlt={title} path={`/projects/${slug}`} />
 
 <div class="w-full">
   <div class="mb-4 sm:mb-6 flex w-full flex-col">

@@ -1,15 +1,8 @@
-export const prerender = true;
+import { projects, articles } from "#lib/content.js";
 
-const toList = (modules) =>
-  Object.entries(modules).map(([path, { metadata }]) => ({ metadata, path }));
+export const prerender = true;
+export const trailingSlash = "never";
 
 export function load() {
-  return {
-    projects: toList(
-      import.meta.glob("./projects/*/+page.md", { eager: true })
-    ),
-    articles: toList(
-      import.meta.glob("./articles/*/+page.md", { eager: true })
-    ),
-  };
+  return { projects, articles };
 }

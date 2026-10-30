@@ -1,4 +1,3 @@
-<!-- TODO: Head -->
 
 <svelte:window on:resize={() => {
   updateHandRotation()
@@ -8,9 +7,10 @@
 <script>
   import { onMount } from 'svelte'
   import PageLayout from '#lib/PageLayout.svelte'
+  import SEO from '#lib/SEO.svelte'
 
   //Setup the data types for the rotating text + store the current index
-  let dataTypes = ["VFX", "design", "space"]
+  let dataTypes = ["3D", "image", "space", "simulation"]
   let dataTypeIndex = 0
 
   //Store the rotation of the pointing hand
@@ -135,25 +135,7 @@
 
 </script>
 
-<svelte:head>
-  <title>Matt Brealey</title>
-  <meta name="description" content="The portfolio site of a freelance creative problem solver." />
-  <meta name="keywords" content="space, react, reactjs, threejs, sapper, svelte, sveltejs, ios, swift, 3d, ar, vfx, design"/>
-
-  <!-- Open Graph / Facebook -->
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://mattbrealey.com">
-  <meta property="og:title" content="Matt Brealey">
-  <meta property="og:description" content="The portfolio site of a freelance creative problem solver.">
-  <meta property="og:image" content="https://mattbrealey.com/profile.jpg">
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:url" content="https://mattbrealey.com">
-  <meta name="twitter:title" content="Matt Brealey">
-  <meta name="twitter:description" content="The portfolio site of a freelance creative problem solver.">
-  <meta name="twitter:image" content="https://mattbrealey.com/profile.jpg">
-</svelte:head>
+<SEO />
 
 <PageLayout>
   <span slot="title">
@@ -174,11 +156,10 @@
       data.
     </p>
     <p class="pt-4">
-      I love making data flow between applications in occasionally odd but incredibly useful ways. Increasing the accessibility of otherwise esoteric datasets is a big part of my work, with my main focus being on image and 3D data.
+      Ex-Apple developer, with a habit of making data flow between applications in occasionally odd but incredibly useful ways. Lately that's meant getting 3D assets into robot simulators without them quietly misbehaving.
     </p>
     <p class="pt-4">
       You can check out some of my personal projects, or read some of my
-      <span class="text-gray-700 italic">(hopefully soon-to-be numerous)</span>
       short articles by clicking the links
       <span class="hidden sm:inline-block">
         up the top over there
@@ -189,7 +170,7 @@
         </span>
     </p>
     <p class="pt-4">
-      Or if you have a specific project in mind,
+      Or if you have something odd that needs building, or you're hiring,
       <a class="font-semibold colorLink" href="mailto:hello@mattbrealey.com">why not say hello?</a>
     </p>
   </span>
