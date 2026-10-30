@@ -6,7 +6,11 @@
 <ul>
   {#each links as link}
       <li>
-          {link.title} : <a class="pl-2 colorLink" href={link.url} target="_blank" rel="noopener noreferrer">{link.url.split("//")[1]}</a>
+          {#if link.download}
+              <a class="colorLink" href={link.url} download>{link.title}</a>
+          {:else}
+              {link.title} : <a class="pl-2 colorLink" href={link.url} target="_blank" rel="noopener noreferrer">{link.url.split("//")[1]}</a>
+          {/if}
       </li>
   {/each}
 </ul>

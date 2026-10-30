@@ -12,7 +12,7 @@
                         {#if feature.image}
                             <img class="absolute h-full w-full object-cover" src={feature.image} alt={feature.desc} />
                         {:else if feature.video}
-                            <video autoplay loop class="absolute h-full w-full">
+                            <video autoplay loop muted playsinline preload="metadata" aria-label={feature.desc} class="absolute h-full w-full">
                                 <source src={feature.video} type="video/mp4">
                                 Your browser does not support the video tag.
                             </video>

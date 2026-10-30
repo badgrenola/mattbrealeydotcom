@@ -18,7 +18,8 @@ tagName: areo
     const links = [
         {
             title:"Download Beta 1 v2",
-            url:"http://bit.ly/areo1b2"
+            url:"/downloads/Areo_1.0b2.zip",
+            download:true
         }
     ]
 
@@ -26,17 +27,17 @@ tagName: areo
         {
             title:"Fast. Very Fast.", 
             desc:"Thanks to Areo's crafty use of image proxying, it takes just 4 seconds to load and process a 1.15gb DTM.", 
-            image: "https://thumbs.gfycat.com/GlumIdealisticGallinule-small.gif"
+            video: "/images/areo/fast.mp4"
         },
         {
             title:"OBJ Export", 
             desc:"Areo can quickly export a UV'd OBJ file of the current model for use in other 3D applications.", 
-            image:"https://thumbs.gfycat.com/CluelessEasygoingIceblueredtopzebra-small.gif"
+            video: "/images/areo/objExport.mp4"
         },
         {
             title:"Generate 3D-Printable Models", 
             desc:"In a few clicks, Areo allows you to generate fully 3D-printable models that can be easily uploaded to your 3D-printing service of choice.", 
-            image:"https://thumbs.gfycat.com/OddQuickAfricanbushviper-small.gif"
+            video: "/images/areo/threeDPrint.mp4"
         },
     ]
 
