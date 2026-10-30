@@ -2,14 +2,20 @@
   import { site } from "./site.js"
 
   let {
-    title = site.name,
-    description = site.description,
+    title: rawTitle = site.name,
+    description: rawDescription = site.description,
     image = site.image.path,
     imageAlt = site.image.alt,
     type = "website", // "website" | "article"
     path = "",
     publishedTime,
   } = $props()
+
+  // Some link scrapers truncate text at a plain apostrophe, so use the typographic one
+  const typographic = (text) => text.replace(/'/g, "\u2019")
+
+  let title = $derived(typographic(rawTitle))
+  let description = $derived(typographic(rawDescription))
 
   const absolute = (p) => (p.startsWith("http") ? p : `${site.origin}${p}`)
 
