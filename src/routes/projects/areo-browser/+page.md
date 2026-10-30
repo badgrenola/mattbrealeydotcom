@@ -11,10 +11,10 @@ tagName: areobrowser
 
 
 <script>
-    import ProjectImage from '$lib/ProjectImage.svelte'
-    import ProjectLinks from '$lib/ProjectLinks.svelte'
-    import ProjectFeatures from '$lib/ProjectFeatures.svelte'
-    import ProjectTodos from '$lib/ProjectTodos.svelte'
+    import ProjectImage from '#lib/ProjectImage.svelte'
+    import ProjectLinks from '#lib/ProjectLinks.svelte'
+    import ProjectFeatures from '#lib/ProjectFeatures.svelte'
+    import ProjectTodos from '#lib/ProjectTodos.svelte'
 
   const links = [
       {

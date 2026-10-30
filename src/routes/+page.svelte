@@ -7,7 +7,7 @@
 
 <script>
   import { onMount } from 'svelte'
-  import PageLayout from '$lib/PageLayout.svelte'
+  import PageLayout from '#lib/PageLayout.svelte'
 
   //Setup the data types for the rotating text + store the current index
   let dataTypes = ["VFX", "design", "space"]

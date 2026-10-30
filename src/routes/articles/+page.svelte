@@ -1,23 +1,7 @@
-<script context="module">
-  /**
-   * @type {import('@sveltejs/kit').Load}
-   */
-  export async function load({ fetch }) {
-    const res = await fetch(`/projects.json`);
-    const projects = await res.json();
-    
-    return {
-      props: {
-        projects,
-      },
-    };
-  }
-</script>
-
 <script>
-	import PageLayout from '$lib/PageLayout.svelte'
-	import Card from '$lib/Card.svelte'
-	export let projects = null
+	import PageLayout from '#lib/PageLayout.svelte'
+	import Card from '#lib/Card.svelte'
+	export let data
 </script>
 
 <svelte:head>
@@ -41,17 +25,23 @@
 </svelte:head>
 
 <PageLayout>
-	<h1 slot="title">Projects</h1>
+	<h1 slot="title">Articles</h1>
 	<div slot="content" class="">
-		{#if projects}
+		{#if data.articles}
 			<div class="flex flex-wrap -mx-2 overflow-hidden sm:-mx-4">
-				{#each projects as project}
+				{#each data.articles as article, articleIndex}
 					<Card
-						desc={project.metadata.desc}
-						link={`/projects/${project.metadata.slug}`}
-						smallImage={project.metadata.smallImage}
-						title={project.metadata.title}
+						date={article.metadata.date}
+						desc={article.metadata.desc}
+						link={`/articles/${article.metadata.slug}`}
+						smallImage={article.metadata.smallImage}
+						title={article.metadata.title}
+						timeToRead={article.metadata.timeToRead}
 					/>
+
+          {#if articleIndex !== data.articles.length - 1}
+            <hr class="w-full mt-6 mb-9 mx-4 md:hidden" />
+          {/if}
 				{/each}
 			</div>
 		{/if}

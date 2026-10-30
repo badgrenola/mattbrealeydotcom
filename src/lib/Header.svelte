@@ -3,35 +3,26 @@
   import Social from './Social.svelte'
 
   //Grab the active route
-  import { getStores } from '$app/stores'
-  const { page } = getStores()
+  import { page } from '$app/state'
 
   //Match the current route to the available options
-  // TODO : svelte should declare these vars for us in the $: statement, but I'm getting undeclared errors
-  let isIndex;
-  let isProjects;
-  let isArticles;
-  $: {
-      //Dynamically update the vars to match the current route
-      isIndex = $page.url.pathname === "/"
-      isProjects = $page.url.pathname === "/projects"
-      isArticles = $page.url.pathname === "/articles"
-  }
+  let isIndex = $derived(page.url.pathname === "/")
+  let isProjects = $derived(page.url.pathname === "/projects")
+  let isArticles = $derived(page.url.pathname === "/articles")
 
   //Store the mobile menu open state
-  var isOpen = false;
+  let isOpen = $state(false)
 
   //Close the menu on route change
-  let oldRoute = $page.url.pathname
-  $: {
+  let oldRoute = page.url.pathname
+  $effect.pre(() => {
       //If the route has changed
-      if (oldRoute !== $page.url.pathname) { 
+      if (oldRoute !== page.url.pathname) {
           //Store the new route, and close the menu
-          oldRoute = $page.url.pathname
+          oldRoute = page.url.pathname
           isOpen = false
       }
-  }
-
+  })
 </script>
 
 <header class="sm:flex sm:justify-between sm:items-center sm:p-4 lg:p-8">
@@ -42,7 +33,7 @@
           </a>
       </div>
       <div class="sm:hidden">
-          <button type="button" id="menuButton" class="block text-black hover:text-gray-800 focus:text-gray-800 focus:outline-none pr-2" on:click={() => {isOpen = !isOpen}}>
+          <button type="button" id="menuButton" class="block text-black hover:text-gray-800 focus:text-gray-800 focus:outline-none pr-2" onclick={() => {isOpen = !isOpen}}>
               <svg class="h-8 w-8 fill-current {isOpen ? 'text-pink-600' : 'text-black'}" viewBox="0 0 100 70">
                   <rect width="100" height="10"></rect>
                   <rect y="30" width="100" height="10"></rect>
