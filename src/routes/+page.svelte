@@ -156,7 +156,7 @@
       data.
     </p>
     <p class="pt-4">
-      Ex-Apple developer, with a habit of making data flow between applications in occasionally odd but incredibly useful ways. Lately that's meant getting 3D assets into robot simulators without them quietly misbehaving.
+      I'm an ex-Apple developer, with a habit of making data flow between applications in occasionally odd but incredibly useful ways. Lately that's meant getting 3D assets into robot simulators without them quietly misbehaving.
     </p>
     <p class="pt-4">
       You can check out some of my personal projects, or read some of my
