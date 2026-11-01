@@ -5,7 +5,6 @@ title: Juno Observer
 smallImage: /images/juno-observer/splash_small.jpeg
 largeImage: /images/juno-observer/splash_half.jpeg
 desc: A web-app allowing you to explore Junocam imagery from NASA's Juno spacecraft, projected onto a 3D Jupiter.
-keywords: juno, space, nasa, jupiter, browser, react, reactjs, mobile, desktop, planet, planetary data, data, spacecraft, orbit, perijove, mission juno
 tagName: junoobserver
 ---
 
@@ -48,7 +47,7 @@ tagName: junoobserver
 
 <ProjectImage {largeImage} {title} {links} />
 <ProjectLinks {links} />
-<h2 id="what-is-it" class="mt-6 text-xl text-pink-600 font-light">What is it?</h2>
+<h2 id="what-is-it" class="mt-6 text-xl text-brand font-light">What is it?</h2>
 
 Junocam is an instrument onboard NASA's [Juno spacecraft](https://www.jpl.nasa.gov/missions/juno/), which is currently orbiting Jupiter and sending back new imagery every month
 and a half as it reaches 'perijove' - it's closest point to the planet. I've written my own processing pipeline for this [image data](https://www.missionjuno.swri.edu/junocam/processing)

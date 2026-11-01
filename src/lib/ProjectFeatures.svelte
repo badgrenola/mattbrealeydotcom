@@ -3,7 +3,7 @@
 </script>
 
 {#if features.length}
-    <h2 id="features" class="mt-6 text-xl text-pink-600 font-light">Features</h2>
+    <h2 id="features" class="mt-6 text-xl text-brand font-light">Features</h2>
     <div class="flex flex-wrap -mx-2 overflow-hidden sm:-mx-4">
         {#each features as feature}
             <div class="my-2 mb-4 px-2 w-full overflow-hidden sm:my-4 sm:px-4 sm:w-full md:w-1/2 xl:w-1/3">
@@ -18,8 +18,8 @@
                             </video>
                         {/if}
                     </div>
-                    <div class="font-semibold mt-1 text-gray-900 group-hover:text-pink-500">{feature.title}</div>
-                    <span class="text-sm text-gray-800">{@html feature.desc}</span>
+                    <div class="font-semibold mt-1 text-ink group-hover:text-accent">{feature.title}</div>
+                    <span class="text-sm text-ink-soft">{@html feature.desc}</span>
                 </div>
             </div>
         {/each}

@@ -5,7 +5,6 @@ title: Areo
 smallImage: /images/areo/splash_small.jpg
 largeImage : /images/areo/splash.jpg
 desc: A Mac app designed for opening, viewing and converting Digital Terrain Models.
-keywords: areo, space, hirise, mac, osx, swift, dtm, gis, terrain, digital terrain model, mars, planet, planetary data, data
 tagName: areo
 ---
 
@@ -48,7 +47,7 @@ tagName: areo
 
 <ProjectImage {largeImage} {title} {links} />
 <ProjectLinks {links} />
-<h2 id="what-is-it" class="mt-6 text-xl text-pink-600 font-light">What is it?</h2>
+<h2 id="what-is-it" class="mt-6 text-xl text-brand font-light">What is it?</h2>
 
 Areo is a custom Mac app designed for opening, viewing and converting Digital Terrain Models in the _.IMG_ format. 
 

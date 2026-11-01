@@ -1,4 +1,4 @@
-<footer class="text-center text-xs text-gray-500 p-4">
+<footer class="text-center text-xs text-muted p-4">
   <p>This site is written in
   <a href="https://kit.svelte.dev/" target="_blank" rel="noopener noreferrer" class="colorLink">SvelteKit</a>
   and

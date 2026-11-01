@@ -63,7 +63,8 @@
   <title>{fullTitle}</title>
   <meta name="description" content={description} />
   <link rel="canonical" href={url} />
-  <meta name="theme-color" content={site.themeColor} />
+  <meta name="theme-color" content={site.themeColor.light} media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content={site.themeColor.dark} media="(prefers-color-scheme: dark)" />
 
   <!-- Open Graph -->
   <meta property="og:type" content={type} />

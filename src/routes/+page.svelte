@@ -152,7 +152,7 @@
       <span class="hidden sm:inline-block">I'm Matt.</span> And I can help you do
       <span class="font-semibold">awesome</span>
       things with your
-      <span class="font-semibold text-pink-600">{dataTypes[dataTypeIndex]}</span>
+      <span class="font-semibold text-brand">{dataTypes[dataTypeIndex]}</span>
       data.
     </p>
     <p class="pt-4">

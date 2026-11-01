@@ -10,7 +10,7 @@
 
 <sidebar class="w-1/5 mr-6 text-sm hidden sm:block">
   <div class="flex flex-col">
-    <h2 class="text-pink-600 font-semibold leading-none tracking-wide">Latest Projects</h2>
+    <h2 class="text-brand font-semibold leading-none tracking-wide">Latest Projects</h2>
     <ul class="mt-2">
       {#each latestProjects as project}
         <li class="mb-1">
@@ -20,7 +20,7 @@
     </ul>
   </div>
   <div class="flex flex-col mt-8">
-    <h2 class="text-pink-600 font-semibold leading-none tracking-wide">Latest Articles</h2>
+    <h2 class="text-brand font-semibold leading-none tracking-wide">Latest Articles</h2>
     <ul class="mt-2">
       {#each latestArticles as article}
         <li class="mb-1">

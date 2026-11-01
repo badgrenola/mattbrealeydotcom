@@ -6,7 +6,6 @@ date: "15th April 2020"
 smallImage: /images/articles/reading-tiff-tags/tags.png
 largeImage: /images/articles/reading-tiff-tags/geodeUI.jpg
 desc: For my new tool, Geode, I needed to learn ALL about tiff tags. Turns out, there's a LOT of them...
-keywords: geode, tiff, code, geotiff, mapping, data, gis
 timeToRead: 6
 ---
 

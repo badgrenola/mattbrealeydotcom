@@ -3,7 +3,10 @@ export const site = {
   name: "Matt Brealey",
   description: "The portfolio site of an ex-Apple developer and 3D data wrangler.",
   locale: "en_GB",
-  themeColor: "#db2777", // Tailwind pink-600
+  themeColor: {
+    light: "#db2777", // Tailwind pink-600
+    dark: "#0e1013", // matches --bg in dark mode (src/app.postcss)
+  },
   github: "https://github.com/badgrenola",
   linkedin: "https://www.linkedin.com/in/mattbrealey/",
   image: {

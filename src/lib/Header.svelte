@@ -29,12 +29,12 @@
   <div class="flex items-center justify-between px-4 py-4 sm:p-0">
       <div class="">
           <a href="/" alt="Home">
-              <img class="h-12 sm:h-16 lg:h-24 rounded-full" src="/profile.jpg" alt="Matt Brealey's head" />
+              <img class="h-12 sm:h-16 lg:h-24 rounded-full avatar" src="/profile.jpg" alt="Matt Brealey's head" />
           </a>
       </div>
       <div class="sm:hidden">
-          <button type="button" id="menuButton" class="block text-black hover:text-gray-800 focus:text-gray-800 focus:outline-none pr-2" onclick={() => {isOpen = !isOpen}}>
-              <svg class="h-8 w-8 fill-current {isOpen ? 'text-pink-600' : 'text-black'}" viewBox="0 0 100 70">
+          <button type="button" id="menuButton" aria-label="Menu" aria-expanded={isOpen} class="block text-icon hover:text-ink-soft focus:text-ink-soft focus:outline-none pr-2" onclick={() => {isOpen = !isOpen}}>
+              <svg class="h-8 w-8 fill-current {isOpen ? 'text-brand' : 'text-icon'}" viewBox="0 0 100 70">
                   <rect width="100" height="10"></rect>
                   <rect y="30" width="100" height="10"></rect>
                   <rect y="60" width="100" height="10"></rect>

@@ -2,7 +2,7 @@
   export let links
 </script>
 
-<h2 id="links" class="mt-6 text-xl text-pink-600 font-light">{links.length > 1 ? "Links" : "Link"}</h2>
+<h2 id="links" class="mt-6 text-xl text-brand font-light">{links.length > 1 ? "Links" : "Link"}</h2>
 <ul>
   {#each links as link}
       <li>
