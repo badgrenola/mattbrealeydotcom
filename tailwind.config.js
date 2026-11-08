@@ -3,6 +3,9 @@ export default {
 
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['ui-sans-serif', 'system-ui', '-apple-system', 'BlinkMacSystemFont', '"Segoe UI"', 'Roboto', 'sans-serif']
+			},
 			// Semantic colours, backed by the CSS variables in src/app.postcss
 			colors: {
 				page: 'var(--bg)',

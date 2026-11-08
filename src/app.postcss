@@ -124,7 +124,7 @@ a.colorLink:hover {
   @apply font-semibold text-center h-12 flex flex-col justify-center align-middle;
 }
 
-a.headerLinkActive {
+a.headerLink[aria-current="page"] {
   @apply text-ink underline decoration-brand decoration-2 underline-offset-8 cursor-default;
 }
 
@@ -156,7 +156,7 @@ a:hover {
 }
 
 .markdown > * {
-  @apply mt-0 mb-4;
+  @apply mt-0 mb-5;
 }
 
 .markdown li + li {
@@ -200,7 +200,7 @@ a:hover {
 }
 
 .markdown blockquote {
-  @apply text-base border-l-4 border-line pl-4 pr-4 text-muted-strong;
+  @apply border-l-4 border-line pl-4 pr-4 text-muted-strong;
 }
 
 .markdown code {
@@ -218,15 +218,15 @@ a:hover {
 }
 
 .markdown ul {
-  @apply text-base pl-8 list-disc;
+  @apply pl-8 list-disc;
 }
 
 .markdown ol {
-  @apply text-base pl-8 list-decimal;
+  @apply pl-8 list-decimal;
 }
 
 .markdown table {
-  @apply text-base border-muted-strong;
+  @apply border-muted-strong;
 }
 
 .markdown th {

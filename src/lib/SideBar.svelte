@@ -1,6 +1,4 @@
 <script>
-  import Social from './Social.svelte'
-
   export let articles = []
   export let projects = []
 
@@ -10,7 +8,7 @@
 
 <aside class="hidden sm:block sm:col-start-1 sm:row-start-2 text-sm">
   <div class="flex flex-col">
-    <h2 class="text-xs font-semibold uppercase tracking-wider text-muted leading-none trim-cap">Latest Projects</h2>
+    <h2 class="text-xs font-medium uppercase tracking-wider text-muted leading-none trim-cap">Latest Projects</h2>
     <ul class="mt-2">
       {#each latestProjects as project}
         <li class="mb-1">
@@ -19,8 +17,8 @@
       {/each}
     </ul>
   </div>
-  <div class="flex flex-col mt-8">
-    <h2 class="text-xs font-semibold uppercase tracking-wider text-muted leading-none trim-cap">Latest Articles</h2>
+  <div class="flex flex-col mt-10">
+    <h2 class="text-xs font-medium uppercase tracking-wider text-muted leading-none trim-cap">Latest Articles</h2>
     <ul class="mt-2">
       {#each latestArticles as article}
         <li class="mb-1">
@@ -28,8 +26,5 @@
         </li>
       {/each}
     </ul>
-  </div>
-  <div class="mt-16 -ml-1">
-    <Social />
   </div>
 </aside>

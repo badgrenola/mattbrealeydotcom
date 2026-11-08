@@ -149,19 +149,19 @@
     >👋</span>
   </span>
 
-  <span slot="content" class="block max-w-[60ch]">
-    <p class="pb-4 sm:hidden">I'm Matt.</p>
+  <span slot="content" class="flex flex-col gap-5 max-w-[60ch]">
+    <p class="sm:hidden">I'm Matt.</p>
     <p>
       <span class="hidden sm:inline-block">I'm Matt.</span> And I can help you do
       <span class="font-semibold">awesome</span>
       things with your
-      <span class="font-semibold text-brand">{dataTypes[dataTypeIndex]}</span>
+      <span class="font-semibold text-brand whitespace-nowrap">{dataTypes[dataTypeIndex]}</span>
       data.
     </p>
-    <p class="pt-4">
+    <p>
       I'm an ex-Apple developer, with a habit of making data flow between applications in occasionally odd but incredibly useful ways. Lately that's meant getting 3D assets into robot simulators without them quietly misbehaving.
     </p>
-    <p class="pt-4">
+    <p>
       You can check out some of my personal projects, or read some of my
       short articles by clicking the links
       <span class="hidden sm:inline-block">
@@ -172,7 +172,7 @@
           👆
         </span>
     </p>
-    <p class="pt-4">
+    <p>
       And if you have something odd that needs building, or you're hiring,
       <a class="font-semibold colorLink" href="mailto:hello@mattbrealey.com">why not say hello?</a>
     </p>

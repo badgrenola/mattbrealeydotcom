@@ -15,8 +15,8 @@
 <SEO {title} description={desc} image={smallImage} imageAlt={title} type="article" path={`/articles/${slug}`} publishedTime={toISODate(date)} />
 
 <div class="w-full">
-    <div class="mb-4 sm:mb-6 flex w-full flex-col">
-        <h1 class="text-3xl text-brand font-semibold leading-tight tracking-tight trim-cap mb-1 sm:mb-3 flex-1">
+    <div class="mb-5 sm:mb-8 flex w-full flex-col">
+        <h1 class="text-4xl sm:text-3xl text-brand font-semibold leading-tight tracking-tight trim-cap mb-1 sm:mb-3 flex-1">
             {title}
         </h1>
         <div class="text-sm text-muted mt-2">{date} · {timeToRead} min read</div>
