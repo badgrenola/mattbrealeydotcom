@@ -47,7 +47,7 @@ tagName: junoobserver
 
 <ProjectImage {largeImage} {title} {links} />
 <ProjectLinks {links} />
-<h2 id="what-is-it" class="mt-6 text-xl text-brand font-light">What is it?</h2>
+<h2 id="what-is-it">What is it?</h2>
 
 Junocam is an instrument onboard NASA's [Juno spacecraft](https://www.jpl.nasa.gov/missions/juno/), which is currently orbiting Jupiter and sending back new imagery every month
 and a half as it reaches 'perijove' - it's closest point to the planet. I've written my own processing pipeline for this [image data](https://www.missionjuno.swri.edu/junocam/processing)

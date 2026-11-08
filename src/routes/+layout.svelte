@@ -9,13 +9,11 @@
 
 
 <div class="container mx-auto flex flex-col min-h-full max-w-5xl">
-	<Header />
-	<main class="flex-grow pb-6">
-		<div class="font-normal text-ink text-base sm:text-base p-6 flex lg:p-8 w-full">
-			<SideBar articles={data.articles} projects={data.projects} />
-			<div class="w-full sm:w-4/5 font-light">
-				<slot></slot>
-			</div>
+	<main class="flex-1 p-6 sm:p-8 grid grid-cols-[1fr_auto] sm:grid-cols-[20%_minmax(0,1fr)] sm:gap-x-6 content-start items-start font-normal text-ink text-base">
+		<Header />
+		<SideBar articles={data.articles} projects={data.projects} />
+		<div class="col-span-2 sm:col-span-1 sm:col-start-2 sm:row-start-2 mt-8 sm:mt-0 min-w-0">
+			<slot></slot>
 		</div>
 	</main>
 

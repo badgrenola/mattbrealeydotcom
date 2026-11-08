@@ -71,7 +71,7 @@ tagName: areobrowser
 
 <ProjectImage {largeImage} {title} {links} />
 <ProjectLinks {links} />
-<h2 id="what-is-it" class="mt-6 text-xl text-brand font-light">What is it?</h2>
+<h2 id="what-is-it">What is it?</h2>
 
 Areo Browser is a [Svelte](https://svelte.dev/)/[ThreeJS](https://threejs.org/) web-app that allows you to explore over 2000 Martian terrain models, in full 3D, directly in your browser and on mobile. 
 It currently uses data from both the [HiRISE](https://www.uahirise.org/) camera (on-board NASA's [Mars Reconnaissance Orbiter](https://mars.nasa.gov/mro/)), and the [HRSC](https://www.esa.int/ESA_Multimedia//Images/2004/01/The_High_Resolution_Stereo_Camera_HRSC) (on-board ESA's [Mars Express](http://www.esa.int/Science_Exploration/Space_Science/Mars_Express)).

@@ -13,8 +13,8 @@
   --muted-strong: #4b5563;  /* gray-600 */
   --pink: #db2777;          /* pink-600: headings */
   --pink-soft: #db2777;     /* pink-600: links */
-  --accent: #ec4899;        /* pink-500: hover */
-  --active: #ec4899;        /* pink-500: active nav, mobile social icons */
+  --accent: #be185d;        /* pink-700: hover (6.0:1 on white) */
+  --active: #be185d;        /* pink-700: mobile social icons */
   --border: #d1d5db;        /* gray-300 */
   --rule: #e5e7eb;          /* gray-200 */
   --code: #e5e7eb;          /* gray-200 */
@@ -44,15 +44,35 @@
   }
 
   /* Content imagery sits a touch lower so it doesn't glare against the dark page */
-  main img,
+  main img:not(.avatar),
   main video {
     filter: brightness(0.92);
   }
+}
 
-  /* Stop the header photo merging into the background */
+/* Header photo: Apple-icon corner ratio, with an inset hairline edge */
+.avatar {
+  border-radius: 22.37%;
+  outline: 1px solid rgb(0 0 0 / 0.1);
+  outline-offset: -1px;
+}
+
+@supports (corner-shape: squircle) {
   .avatar {
-    box-shadow: 0 0 0 2px #1d2128;
+    corner-shape: squircle;
   }
+}
+
+/* In dark mode the photo's edge is almost the page colour, so use a light hairline (must come after the base rule) */
+@media (prefers-color-scheme: dark) {
+  .avatar {
+    outline-color: rgb(255 255 255 / 0.18);
+  }
+}
+
+/* Trim the font's built-in space above caps so headings align on their cap-tops */
+.trim-cap {
+  text-box: trim-both cap alphabetic;
 }
 
 /* Ensure page is full height */
@@ -71,6 +91,12 @@ html, body {
   @apply bg-pink-600 text-white;
 }
 
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
 /* Extract link styles */
 a {
   cursor: pointer;
@@ -80,12 +106,26 @@ a.colorLink {
   @apply text-link;
 }
 
+/* Inline links shouldn't rely on colour alone */
+.markdown a,
+a.colorLink {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+
+.markdown a:hover,
+a.colorLink:hover {
+  text-decoration-color: currentColor;
+}
+
 .headerLink {  /* Not specific to links as Social component uses it too */
   @apply font-semibold text-center h-12 flex flex-col justify-center align-middle;
 }
 
 a.headerLinkActive {
-  @apply text-active underline cursor-default;
+  @apply text-ink underline decoration-brand decoration-2 underline-offset-8 cursor-default;
 }
 
 a:hover {
@@ -102,11 +142,17 @@ a:hover {
 /* https://raw.githubusercontent.com/iandinwoodie/github-markdown-tailwindcss/master/markdown.css */
 
 .markdown {
-  @apply text-ink leading-normal break-words;
+  @apply text-ink leading-relaxed break-words;
 }
 
 .markdown a {
   @apply text-link;
+}
+
+/* rehype-autolink-headings wraps headings in links; keep them the heading colour */
+.markdown :is(h1, h2, h3, h4) > a {
+  color: inherit;
+  text-decoration: none;
 }
 
 .markdown > * {
@@ -130,7 +176,7 @@ a:hover {
 }
 
 .markdown h2 {
-  @apply mt-6 text-2xl text-brand font-light;
+  @apply mt-8 mb-3 text-2xl text-ink font-normal;
 }
 
 .markdown h2:nth-child(n+3) {
@@ -138,7 +184,7 @@ a:hover {
 }
 
 .markdown h3 {
-  @apply mt-8 text-base font-light text-muted-strong;
+  @apply mt-8 mb-2 text-base font-semibold text-muted-strong;
 }
 
 .markdown h4 {
@@ -162,8 +208,9 @@ a:hover {
 }
 
 .markdown pre {
-  @apply bg-code-block rounded p-4 break-words;
-  white-space: normal;
+  @apply bg-code-block rounded p-4;
+  white-space: pre;
+  overflow-x: auto;
 }
 
 .markdown pre code {
@@ -191,11 +238,11 @@ a:hover {
 }
 
 .markdown figure {
-  @apply py-6 text-center;
+  @apply my-8 text-center;
 }
 
-.markdown figure > figcaption { 
-  @apply text-xs pt-2;
+.markdown figure > figcaption {
+  @apply text-sm text-muted pt-3;
 }
 
 @tailwind utilities;

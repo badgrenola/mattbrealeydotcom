@@ -3,7 +3,7 @@
 </script>
 
 {#if features.length}
-    <h2 id="features" class="mt-6 text-xl text-brand font-light">Features</h2>
+    <h2 id="features">Features</h2>
     <div class="flex flex-wrap -mx-2 overflow-hidden sm:-mx-4">
         {#each features as feature}
             <div class="my-2 mb-4 px-2 w-full overflow-hidden sm:my-4 sm:px-4 sm:w-full md:w-1/2 xl:w-1/3">

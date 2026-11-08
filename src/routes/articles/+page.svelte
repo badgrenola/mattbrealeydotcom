@@ -8,7 +8,7 @@
 <SEO title="Articles" path="/articles" />
 
 <PageLayout>
-	<h1 slot="title">Articles</h1>
+	<span slot="title">Articles</span>
 	<div slot="content" class="">
 		{#if data.articles}
 			<div class="flex flex-wrap -mx-2 overflow-hidden sm:-mx-4">

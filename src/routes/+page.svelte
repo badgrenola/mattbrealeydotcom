@@ -104,14 +104,17 @@
 
   //On mount, start the rotation + return a cleanup function
   onMount(async () => {
+    //Respect the reduced motion setting: no rotating word, no waving
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches
+
     //Setup the text update timer
-    const textUpdateTimer = setInterval(() => {
+    const textUpdateTimer = reduceMotion ? null : setInterval(() => {
       dataTypeIndex = dataTypeIndex == (dataTypes.length - 1) ? 0 : dataTypeIndex + 1;
-    }, 1500)
+    }, 2500)
 
     //Setup the hand waving, and store the interval
     waveElement = document.getElementById("wavingHand")  
-    const waveInterval = wavingWithDelay()
+    const waveInterval = reduceMotion ? null : wavingWithDelay()
 
     //Store the hand/projects menu elements
     handElement = document.getElementById("pointingHand");
@@ -146,7 +149,7 @@
     >👋</span>
   </span>
 
-  <span slot = "content">
+  <span slot="content" class="block max-w-[60ch]">
     <p class="pb-4 sm:hidden">I'm Matt.</p>
     <p>
       <span class="hidden sm:inline-block">I'm Matt.</span> And I can help you do

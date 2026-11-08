@@ -32,7 +32,7 @@ tagName: geode
 
 <ProjectImage {largeImage} {title} {links} />
 <ProjectLinks {links} />
-<h2 id="what-is-it" class="mt-6 text-xl text-brand font-light">What is it?</h2>
+<h2 id="what-is-it">What is it?</h2>
 
 Geode is a web-app prototype that allows you to quickly and easily query the metadata stored inside any GeoTiff file simply by dragging the file into your browser.
 

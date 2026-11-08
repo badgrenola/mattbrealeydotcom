@@ -6,6 +6,8 @@ date: "19th January 2022"
 smallImage: /images/articles/rss-rover-images/imageGrid.png
 largeImage: /images/articles/rss-rover-images/imageGrid_big.png
 desc: A brief description of why/how I've started adding easily-viewable rover images to Areo Browser.
+largeImageWidth: 1680
+largeImageHeight: 970
 timeToRead: 7
 ---
 

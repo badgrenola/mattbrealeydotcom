@@ -11,7 +11,7 @@
   <div class="group flex flex-col relative h-full cursor-pointer">
       <a data-sveltekit-preload-data="hover" href={link} aria-label={title} class="absolute w-full h-full z-10"> </a>
       <div class="relative pb-[66.66%] rounded-md overflow-hidden group-hover:opacity-90 transition-opacity duration-100 ease-in-out mb-2">
-          <img class="absolute h-full w-full object-cover bg-line" src={smallImage} alt={title} />
+          <img class="absolute h-full w-full object-cover bg-line" src={smallImage} alt="" />
       </div>
       {#if date || timeToRead}
           <div class="mt-2 font-light text-xs text-muted flex justify-between">

@@ -47,7 +47,7 @@ tagName: areo
 
 <ProjectImage {largeImage} {title} {links} />
 <ProjectLinks {links} />
-<h2 id="what-is-it" class="mt-6 text-xl text-brand font-light">What is it?</h2>
+<h2 id="what-is-it">What is it?</h2>
 
 Areo is a custom Mac app designed for opening, viewing and converting Digital Terrain Models in the _.IMG_ format. 
 
