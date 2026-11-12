@@ -8,7 +8,6 @@ largeImage: /images/articles/reading-tiff-tags/geodeUI.jpg
 desc: For my new tool, Geode, I needed to learn ALL about tiff tags. Turns out, there's a LOT of them...
 largeImageWidth: 1680
 largeImageHeight: 948
-timeToRead: 6
 ---
 
 I'm currently in the process of adding several other formats to [Areo](/projects/areo), my _'take binary elevation data and make into exportable 3D mesh'_ tool, one of which is [Geotiff](https://earthdata.nasa.gov/esdis/eso/standards-and-references/geotiff). Instead of just figuring out how to read the format (boo, boring, boo), I thought I'd try and make an in-browser tool to read local tiff files, show 2D previews with custom colour mapping, and generate downloadable 3D mesh previews if applicable (hooray, 3D things, yay!) I also thought I'd briefly write it all up as I went. 👋

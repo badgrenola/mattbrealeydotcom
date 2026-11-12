@@ -8,7 +8,6 @@ largeImage: /images/articles/rss-rover-images/imageGrid_big.png
 desc: A brief description of why/how I've started adding easily-viewable rover images to Areo Browser.
 largeImageWidth: 1680
 largeImageHeight: 970
-timeToRead: 7
 ---
 
 One of my goals for [Areo Browser](/projects/areo-browser) has always been to display rover imagery in context, on and around the 3D models I'm generating from the available DTMs.

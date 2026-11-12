@@ -19,7 +19,7 @@
                   <span>{date}</span>
               {/if}
               {#if timeToRead}
-                  <span class="text-right">{timeToRead} mins to read</span>
+                  <span class="text-right">{timeToRead} min read</span>
               {/if}
           </div>
       {/if}
